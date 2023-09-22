@@ -20,6 +20,7 @@ class Livros{
     add(livro){
         this.livros.push(livro)
     }
+    
 }
 
 export default Livros
