@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    width: 300px;
+    height: 300px;
+}
+
+.counter{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 20px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    width: 300px;
+    height: 100px;
+}
+
+.bnt{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    width: 100px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    cursor: pointer;
+}
