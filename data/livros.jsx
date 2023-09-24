@@ -1,20 +1,20 @@
 const livros = [
     {
-        titulo: 'O Senhor dos Anéis',
-        autor: 'J. R. R. Tolkien',
-        paginas: 1000,
+        titulo: 'Diario de um Banana',
+        autor: 'Jeff Kinney',
+        paginas: 200,
         id: 1,
     },
     {
-        titulo: 'Harry Potter',
-        autor: 'J. K. Rowling',
-        paginas: 500,
+        titulo: 'Diario de Anne Frank',
+        autor: 'Anne Frank',
+        paginas: 300,
         id: 2,
     },
     {
-        titulo: 'As Crônicas de Nárnia',
-        autor: 'C. S. Lewis',
-        paginas: 800,
+        titulo: '1808',
+        autor: 'Laurentino Gomes',
+        paginas: 400,
         id: 3,
     },
     
