@@ -7,7 +7,7 @@ export const Header = () => {
     return (
         <aside className={styles.container}>
             <div>
-                <Image src={'/logo-6dev-semfundo.png'} width={84} height={64}></Image>
+                <Image src={'/logo-6dev-semfundo.png'}  alt='jorge' width={84} height={64}></Image>
             </div>
             <div className={styles.links}>
                 <NavLink rota="/" texto="Home" />

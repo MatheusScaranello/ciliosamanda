@@ -1,8 +1,8 @@
-class Livro {
-    constructor(titulo, autor, ano, id) {
+class LivroClass {
+    constructor(titulo, autor, paginas, id) {
         this.titulo = titulo
         this.autor = autor
-        this.ano = ano
+        this.paginas = paginas
         this.id =  id || this.generedId()
     }
     generedId() {
@@ -22,5 +22,7 @@ class Livros{
     }
     
 }
+new Livros()
 
 export default Livros
+export {LivroClass}
