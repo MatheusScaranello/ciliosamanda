@@ -5,18 +5,13 @@ import LivrosData from '../../data/livros';
 import { Header } from '../componets/header/Header';
 import Livros, {LivroClass} from '../../models/livro';
 
-
 export default function PageClass() {
-    const teste =  new LivroClass('teste', 'teste', 1000);
-    console.log(teste);
 
     const minhaListaLivros = new Livros();
-
 
     LivrosData.map((livro) => {
         const novoLivro = new LivroClass(livro.titulo, livro.autor, livro.paginas, livro.id);
         minhaListaLivros.add(novoLivro);
-        console.log(minhaListaLivros);
     });
 
     return (
@@ -32,8 +27,4 @@ export default function PageClass() {
                             <p>{livro.paginas}</p>
                         </li>
                     ))}
-                </ul>
-            </div>
-        </>
-    );
-}
+</ul></div></>);}

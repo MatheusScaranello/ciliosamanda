@@ -1,22 +1,29 @@
 const livros = [
     {
-        titulo: 'Diario de um Banana',
-        autor: 'Jeff Kinney',
-        paginas: 200,
+        titulo: 'O Senhor dos Anéis',
+        autor: 'J. R. R. Tolkien',
+        paginas: 1000,
         id: 1,
     },
     {
-        titulo: 'Diario de Anne Frank',
-        autor: 'Anne Frank',
-        paginas: 300,
+        titulo: 'Harry Potter',
+        autor: 'J. K. Rowling',
+        paginas: 500,
         id: 2,
     },
     {
-        titulo: '1808',
-        autor: 'Laurentino Gomes',
-        paginas: 400,
+        titulo: 'As Crônicas de Nárnia',
+        autor: 'C. S. Lewis',
+        paginas: 800,
         id: 3,
     },
+    {
+        titulo: "Harry Potter e a Pedra Filosofal",
+        autor: "J.K. Rowling",
+        paginas: 223,
+        id: 4,
+    }
     
 ];
+
 export default livros;
