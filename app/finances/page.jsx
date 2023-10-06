@@ -4,6 +4,8 @@ import styles from './finances.module.css'
 import { Header } from '../componets/header/Header'
 import ListaTrasacao from '@/models/ListaTransacao'
 import DeshCard from '../componets/dashCard/DashCard'
+import Buttons from '../componets/buttons/Buttuns'
+import Registers from '../componets/registers/Registers'
 
 import { FaPen, FaTrash } from 'react-icons/fa'
 
@@ -104,11 +106,11 @@ function Finances() {
                         <div className={styles.type}>
                             {
                                 editButton ? (
-                                    <button className={styles.buttonAtualizar} onClick={() => atualizar()}>Atualizar</button>
-                                ) : (
+                                    <Buttons tipo={'atualizar'} onClick={() => atualizar()} />
+                                                                ) : (
                                     <>
-                                        <button className={styles.buttonreceita}  onClick={addReceita}>Receita</button>
-                                        <button className={styles.buttondespesa} onClick={addDespesa}>Despesa</button>
+                                            <Buttons tipo={'add'} onClick={() => addReceita()} />
+                                            <Buttons tipo={'despesa'} onClick={() => addDespesa()} />  
                                     </>
                                 )
                             }
@@ -122,41 +124,9 @@ function Finances() {
                 </div>
 
                 <div className={styles.registros}>
-                    <div className={styles.registrosreceitas}>
-                        <p className={styles.registrosreceitastitle}>Receitas Registradas</p>
-                        <div className={styles.registrosreceitaslist}>
-                            {
-                                listaTrasacao.historico.map((item) => 
-                                {
-                                                        console.log(item.id);
-
-                                    return(item.type == 'receita' && (
-                                            <div key={item.id} className={styles.registrosreceitasitem}>
-                                                <p>{item.description}</p>
-                                                <p className={styles.registrosreceitasitemvalue}>R$ {item.value}</p>
-
-                                                <div className={styles.registrosreceitasitembuttons}>
-                                                    <button className={styles.actionsbutton} onClick={() => exclude(item.id)}><FaTrash /></button>
-                                                    <button className={styles.actionsbutton} onClick={() => edit(item.id)}><FaPen /></button>
-                                                    </div>
-                                                    
-                                                
-                                            </div>
-                                        ))} )
-                                                    }
-                                    
-                                
-                            
-                        </div>
-                    </div>
-
-                    <div className={styles.registrosdespesas}>
-                        <p className={styles.registrosdespesastitle}>Despesas Registradas</p>
-                        <div className={styles.registrosdespesaslist}>
-                           
-                        </div>
-                    </div>
+                    <Registers />
                 </div>
+                
             </div>
         </>
     )
