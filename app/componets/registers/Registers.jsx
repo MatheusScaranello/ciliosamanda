@@ -1,83 +1,34 @@
-"use client"
-import styles from './registers.module.css';
-import ListaTrasacao from '@/models/ListaTransacao';
-import Buttons from '../buttons/Buttuns';
-import { useState } from 'react';
+import Button from "../button/Button";
+import { FaPen, FaTrash } from 'react-icons/fa'
+import styles from './DashItem.module.css'
 
-const listaTrasacao = new ListaTrasacao()
+const Register = ({ id, value, description, color, deleteTransaction, edit}) => {
 
-const Registers = ({ }) => {
-    return (
-        <>
-            <div className={styles.registers}>
-                {RegisterTipos("receita")}
-                {RegisterTipos("despesa")}
-            </div>
-        </>
-    )
-}
 
-function RegisterTipos(tipo){
-    if (tipo == "receita") {
+    
         return (
-            <div className={styles.registrosreceitas}>
-                <p className={styles.registrosreceitastitle}>Receitas Registradas</p>
-                <div className={styles.registrosreceitaslist}>
-                    {
-                        listaTrasacao.historico.map((item) => 
-                        {
 
-                            return(item.type == 'receita' && (
-                                    <div key={item.id} className={styles.registrosreceitasitem}>
-                                        <p>{item.description}</p>
-                                        <p className={styles.registrosreceitasitemvalue}>R$ {item.value}</p>
-
-                                        <div className={styles.registrosreceitasitembuttons}>
-                                            <Buttons tipo={'edit'} onClick={() => edit(item.id)} />
-                                            <Buttons tipo={'delete'} onClick={() => exclude(item.id)} />
-
-                                            </div>
-                                            
-                                        
-                                    </div>
-                                ))} )
-                                            }
-                                
-                            
-                        
-                    </div>
+            <div className={styles.item} style={{backgroundColor: color}}>
+                <div className={styles.item__description}>
+                    <h3>{description}:</h3>
                 </div>
-            
-
-        )
-    }else{
-        return (
-            <div className={styles.registrosdespesas}>
-                <p className={styles.registrosdespesastitle}>Despesas Registradas</p>
-                <div className={styles.registrosdespesaslist}>
-                   {
-                        listaTrasacao.historico.map((item) => 
-                        {
-
-                            return(item.type == 'despesa' && (
-                                    <div key={item.id} className={styles.registrosreceitasitem}>
-                                        <p>{item.description}</p>
-                                        <p className={styles.registrosreceitasitemvalue}>R$ {item.value}</p>
-
-                                        <div className={styles.registrosreceitasitembuttons}>
-                                            <Buttons tipo={'edit'} onClick={() => edit(item.id)} />
-                                            <Buttons tipo={'delete'} onClick={() => exclude(item.id)} />
-
-                                            </div>
-                                            
-                                        
-                                    </div>
-                                ))} )
-                   }
+                <div className={styles.item__value}>
+                    <p className={styles.valuee}>€{value}</p>
+                </div>
+                <div className={styles.item__buttons}>
+                    <Button
+                        onClick={() => edit(id)}
+                        className={styles.item__button}
+                        text={<FaPen />}
+                    />
+                    <Button
+                        onClick={() => deleteTransaction(id)}
+                        className={styles.item__button}
+                        text={<FaTrash />}
+                    />
                 </div>
             </div>
         )
     }
-    
-}
-export default Registers
+
+export default Register;

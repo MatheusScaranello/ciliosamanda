@@ -6,6 +6,7 @@ import ListaTrasacao from '@/models/ListaTransacao'
 import DeshCard from '../componets/dashCard/DashCard'
 import Buttons from '../componets/buttons/Buttuns'
 import Registers from '../componets/registers/Registers'
+import TransactionList from '../componets/transactionsList/trasactionList'
 
 import { FaPen, FaTrash } from 'react-icons/fa'
 
@@ -124,7 +125,8 @@ function Finances() {
                 </div>
 
                 <div className={styles.registros}>
-                    <Registers />
+                    <TransactionList list={lista} deleteTransaction={exclude} edit={edit} color={"green"}/>
+                    <TransactionList list={lista} deleteTransaction={exclude} edit={edit} color={"red"}/>
                 </div>
                 
             </div>
