@@ -4,11 +4,9 @@ import styles from './finances.module.css'
 import { Header } from '../componets/header/Header'
 import ListaTrasacao from '@/models/ListaTransacao'
 import DeshCard from '../componets/dashCard/DashCard'
-import Buttons from '../componets/buttons/Buttuns'
-import Registers from '../componets/registers/Registers'
 import TransactionList from '../componets/transactionsList/trasactionList'
-
-import { FaPen, FaTrash } from 'react-icons/fa'
+import Buttons from '../componets/buttons/Buttuns'
+import PopUpMenssage from '../componets/popUp/PopUp'
 
 const listaTrasacao = new ListaTrasacao()
 
@@ -32,6 +30,11 @@ function Finances() {
     const [editButton, setEditButton] = useState(false)
 
     // Funções
+    
+    function verificadMenssage (){
+                        if (description !== '' & value !== '') {
+                        return 'AAA'
+                    }}
 
     const addReceita = () => {
         listaTrasacao.addTasacao(description, value, "receita")
@@ -125,9 +128,28 @@ function Finances() {
                 </div>
 
                 <div className={styles.registros}>
-                    <TransactionList list={lista} deleteTransaction={exclude} edit={edit} color={"green"}/>
-                    <TransactionList list={lista} deleteTransaction={exclude} edit={edit} color={"red"}/>
+                    <div className={styles.registrosreceitas}>
+                        <p className={styles.registrosreceitastitle}>Receitas</p>
+                        {
+                            lista.map(item => (
+                                item.type === 'receita' ? (
+                                    <TransactionList color={"#9fc7e0"} list={lista} deleteTransaction={exclude} edit={edit}/>
+                                ) : (
+                                    null
+                                )
+                            ))
+                        }
+                    </div>
+                    <div className={styles.registrosdespesas}>
+                        <p className={styles.registrosdespesastitle}>Despesas</p>
+                        <TransactionList color={"#e09f9f"} list={lista} deleteTransaction={exclude} edit={edit}/>
+                        </div>
+                    
                 </div>
+                
+            </div>
+            <div>
+                <PopUpMenssage messagem={verificadMenssage()}/>
                 
             </div>
         </>

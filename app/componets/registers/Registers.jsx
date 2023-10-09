@@ -1,6 +1,6 @@
-import Button from "../button/Button";
 import { FaPen, FaTrash } from 'react-icons/fa'
-import styles from './DashItem.module.css'
+import Button from '../buttons/Buttuns'
+import styles from './registers.module.css'
 
 const Register = ({ id, value, description, color, deleteTransaction, edit}) => {
 
@@ -13,7 +13,7 @@ const Register = ({ id, value, description, color, deleteTransaction, edit}) => 
                     <h3>{description}:</h3>
                 </div>
                 <div className={styles.item__value}>
-                    <p className={styles.valuee}>€{value}</p>
+                    <p className={styles.valuee}>RS{value}</p>
                 </div>
                 <div className={styles.item__buttons}>
                     <Button
@@ -22,7 +22,7 @@ const Register = ({ id, value, description, color, deleteTransaction, edit}) => 
                         text={<FaPen />}
                     />
                     <Button
-                        onClick={() => deleteTransaction(id)}
+                        onClick={() => exclude(id)}
                         className={styles.item__button}
                         text={<FaTrash />}
                     />

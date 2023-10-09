@@ -2,7 +2,7 @@ import styles from './message.module.css'
 
 function Message(type) {
     if (type === 'correct') {
-        return ('Parabéns, você enviou com sucesso!!'
+        return ('Campos preenchidos, pode enviar!!'
         )
     } else if (type === 'incorrect') {
         return ('Preencha todos os campos!!')
@@ -12,13 +12,10 @@ function Message(type) {
 }
 
 function VerificadMessage(message) {
+    console.log(message);
     var type = ''
     Message(type);
-    if (message.length > 8) {
-        return (
-            type = 'grande'
-        )
-    } else if (message) {
+    if (message) {
         return (
             type = 'correct'
         )

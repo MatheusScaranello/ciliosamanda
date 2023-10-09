@@ -1,15 +1,11 @@
 import React from 'react'
 import styles from './popUp.module.css'
+import Message from '../message/Message'
 
-const PopUpMenssage = ({typeColor, messagem}) => {
-    
-    //let color = (typeColor === 'sucesso') ? styles.sucesso : styles.error
-    let color = styles[typeColor]
-    let container = styles.mainDiv + ' ' + color
-
+const PopUpMenssage = ({messagem}) => {
     return (
-        <div className={container}>
-            <h1>{messagem}</h1>
+        <div className={styles.container}>
+            <Message message={messagem} />
         </div>
     )
 }

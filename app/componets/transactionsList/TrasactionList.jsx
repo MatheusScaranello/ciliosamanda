@@ -1,12 +1,11 @@
 import Register from "../registers/Registers";
-import styles from "./TransactionList.module.css";
-
+import { FaPen, FaTrash } from 'react-icons/fa';
 
 const TransactionList = ({ list, deleteTransaction, edit, color} ) => {
 
    
     return (
-        <div className={styles.list} style={{backgroundColor: color}}>
+        <div style={{backgroundColor: color}}>
         {
         
         list.map(item => (

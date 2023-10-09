@@ -1,4 +1,3 @@
-import style from './Buttons.module.css'
 import { FaPen, FaTrash } from 'react-icons/fa'
 
 const Buttons = ({ onClick, tipo }) => {

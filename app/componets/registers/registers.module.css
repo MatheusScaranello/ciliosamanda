@@ -416,3 +416,21 @@
     gap: 10rem;
     align-items: center;
   }
+
+  .item__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
