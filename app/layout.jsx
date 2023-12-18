@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'River Campinense',
-  description: 'O maior de Campinas e região',
+  title: 'Amanda Studios',
+  description: 'Venha realçar sua beleza com a Amanda Studios',
 }
 
 export default function RootLayout({ children }) {

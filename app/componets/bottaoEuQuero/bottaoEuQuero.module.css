@@ -1,0 +1,82 @@
+.bottaoEuQuero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .bottaoEuQuero a {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    padding: 20px 40px;
+    background-color: #ff3366;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    align-items: center;
+    text-align: center ;
+  }
+  
+  .bottaoEuQuero a:hover {
+    transform: translateY(-5px);
+  }
+  
+  .bottaoEuQuero a:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image: radial-gradient(#ff3366, transparent);
+    opacity: 0.7;
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse-ring 1s infinite;
+  }
+  
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  
+  .bottaoEuQuero button {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #ff3366;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .bottaoEuQuero button:hover {
+    background-color: #ff0055;
+  }
+  
